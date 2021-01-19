@@ -1,0 +1,2 @@
+release : python manage.py migrate --settings=jumga.settings.prod
+web: bin/start-nginx gunicorn -c gunicorn.conf jumga.wsgi --log-file -

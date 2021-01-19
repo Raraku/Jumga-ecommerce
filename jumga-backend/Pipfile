@@ -1,0 +1,32 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+django-allauth = "*"
+django-cors-headers = "*"
+django-rest-auth = "*"
+gunicorn = "*"
+pillow = "*"
+requests = "*"
+six = "*"
+dj-database-url = "*"
+django-heroku = "*"
+whitenoise = "*"
+django-taggit = "*"
+beautifulsoup4 = "*"
+lxml = "*"
+django-storages = {extras = ["google"], version = "*"}
+python-dotenv = "*"
+psycopg2 = "*"
+
+[dev-packages]
+black = "*"
+
+[requires]
+python_version = "3.9"
+
+[pipenv]
+allow_prereleases = true

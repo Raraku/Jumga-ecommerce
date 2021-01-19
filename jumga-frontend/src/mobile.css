@@ -1,0 +1,42 @@
+@media only screen and (min-width: 768px) {
+  .mobile {
+    display: none !important;
+  }
+  .a2-card-image {
+    max-height: 25vw !important;
+  }
+  .ui.cards.excluded.two > .ui.card {
+    width: calc(12.5% - 1em);
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 768px) {
+    .desktop {
+    display: none !important;
+  }
+  .ui.vertical.menu.bigger{
+      width: auto !important;
+  }
+  .image-col {
+      height: 50vw;
+
+  }
+  .ui.container.product-cont{
+      margin-right: 0 !important;
+  }
+  .left-page{
+      text-align: left !important
+  }
+  .ui.pagination.menu{
+      display: flex !important;
+  }
+  #order-column{
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+  }
+  .expand-address-header{
+      margin-bottom: 1em;
+  }
+}
