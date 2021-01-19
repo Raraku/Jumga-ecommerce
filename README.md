@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Jumga Readme
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple ecommerce site where people can buy and sell their products. It has branches in 4 countries and is miraculously capable of delivering any purchase to any particular location.
 
-## Available Scripts
 
-In the project directory, you can run:
+# Toolset
 
-### `yarn start`
+This application is written in **Javascript** and **Python **
+The frontend is built with a Javascript framework called **React**. It is futuristic, lightweight and fast. It communicates with the backend through API calls to further decentralize the application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The aforementioned backend server is built exclusively with **Django**. In my opinion, it is quite frankly the best tool for building backend applications because it comes inbuilt with the latest security features. In fact, I was so impressed with it that I decided to attach the seller dashboard to it, i.e a seller modifies their products and view transactions through the secure Inbuilt Admin Portal; specially modified so they can only access what they mean to.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Django can actually be used to build fullstack applications but its frontend is far subpar to something like React and my love for modularity (i.e I can easily attach the frontend to another backend) made me to use it as an API server only).
 
-### `yarn test`
+The example repo is hosted on Heroku for the backend and Netlify for the Frontend, Static Files are hosted on GCP
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## ORDER FLOW
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The most important part of the application is the order and it goes something like this:
+1. Seller Creates a product
+2. A user sees the product and adds it to cart.
+3. The user submits his cart
+4. This hits an api endpoint on the backend which communicates with Flutterwave and returns a form to the user. (It uses Flutterwave Standard)
+5. The transaction is created and stored.
+6. The user pays for the order 
+7. Flutterwave hits our webhook, we verify its authenticity and we give value to the user.
+8. The seller and their dispatcher receives their compensation.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Setup
+1. There is a makeProducts management command attached to the project.
+2. After creating a superuser, assign the sellershop ability to create products, view their orderlines and see their transactions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you.
